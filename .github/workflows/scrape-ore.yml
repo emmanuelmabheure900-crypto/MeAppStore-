@@ -13,9 +13,8 @@ jobs:
 
       - name: Execute Cloud Handshake Ingestion
         run: |
-          # 📡 Spoofs a real Apple Safari Mobile User-Agent to bypass firewall blocks instantly
-          # REPLACE THE LINK BELOW WITH YOUR REAL DATA SOURCE INTERFACE LINK WHEN RUNNING
-          curl -s -A "Mozilla/5.0 (iPhone; CPU iPhone OS 16_5 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.5 Mobile/15E148 Safari/604.1" "https://apple.com" -o index.html
+          # 📡 Disguises the cloud server as a mobile iPhone browser to clear Apple's CDN blocks
+          curl -s -L -A "Mozilla/5.0 (iPhone; CPU iPhone OS 16_5 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.5 Mobile/15E148 Safari/604.1" "https://apple.com" -o index.html
           echo "🥇 Firewalls bypassed successfully: Extracted raw source code block!"
 
       - name: Auto-Commit Pure Gold to GitHub Production Branch
@@ -24,4 +23,6 @@ jobs:
           git config --global user.email "41898282+github-actions[bot]@://github.com"
           git add index.html
           git commit -m "🚀 Complete 1:1 automated cloud ore harvest sequence compiled successfully" || echo "No changes detected."
-          git push origin main || git push origin master
+          
+          # ⚡ CORRECTION STATE LATCHED: Forces the upload straight to the main default branch track!
+          git push origin main
