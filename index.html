@@ -5,26 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>MeAppStore - Custom iOS Style Storefront</title>
     
-    <!-- SEO & Author Metadata for Google Search -->
     <meta name="author" content="Emmanuel Mabheure" />
     <meta name="description" content="MeAppStore is a custom web storefront for iOS-styled applications, features, and APK releases created by Emmanuel Mabheure." />
-    <meta name="keywords" content="MeAppStore, Emmanuel Mabheure, iOS Clones, Web App Store, iOS Launcher APK" />
     
-    <!-- Google Search Engine Indexing -->
-    <meta name="robots" content="index, follow" />
-    <link rel="canonical" href="https://your-domain.com/" />
-
-    <!-- Style Modules Imports -->
-    <link rel="stylesheet" href="/src/styles/typography.css" />
-    <link rel="stylesheet" href="/src/styles/layout.css" />
-    <link rel="stylesheet" href="/src/styles/main.css" />
+    <!-- CSS Stylesheets -->
+    <link rel="stylesheet" href="src/styles/typography.css" />
+    <link rel="stylesheet" href="src/styles/layout.css" />
+    <link rel="stylesheet" href="src/styles/main.css" />
 </head>
 <body>
 
     <!-- Barebones Mount Node -->
     <div id="app"></div>
 
-    <!-- Main JS Orchestrator -->
-    <script type="module" src="/src/main.js"></script>
+    <!-- Scripts (Loaded in sequence) -->
+    <script src="src/components/AppCard.js"></script>
+    <script src="src/components/AppGrid.js"></script>
+    <script src="src/components/Header.js"></script>
+    <script src="src/components/Sidebar.js"></script>
+    <script src="src/components/Footer.js"></script>
+    <script src="src/pages/Home.js"></script>
+    <script src="src/pages/IosClones.js"></script>
+    <script src="src/pages/About.js"></script>
+    <script src="src/main.js"></script>
 </body>
 </html>
