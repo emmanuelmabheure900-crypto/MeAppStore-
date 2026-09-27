@@ -1,0 +1,176 @@
+/* ==========================================================================
+   MEAPPSTORE - PURE UI SYSTEM STYLESHEET
+   Apple Human Interface Guidelines (HIG) Adapted for Android
+   ========================================================================== */
+
+/* 1. Global Reset & Box Sizing */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Display", "Helvetica Neue", Roboto, sans-serif;
+  background-color: #f5f5f7;
+  color: #1d1d1f;
+  line-height: 1.47059;
+  font-weight: 400;
+  letter-spacing: -0.022em;
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: transparent;
+  padding-bottom: 40px;
+}
+
+/* 2. Frosted Glass (Liquid Glass) Top Header */
+header, .liquid-header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999;
+  background: rgba(255, 255, 255, 0.82);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  backdrop-filter: blur(20px) saturate(180%);
+  border-bottom: 0.5px solid rgba(0, 0, 0, 0.12);
+  padding: 12px 16px;
+  text-align: center;
+}
+
+.liquid-header h1, header h1 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #000000;
+  letter-spacing: -0.02em;
+}
+
+.liquid-header p, header p {
+  font-size: 0.72rem;
+  color: #86868b;
+  font-weight: 500;
+  margin-top: 2px;
+}
+
+/* 3. Category & Navigation Pills Track */
+nav, .category-track {
+  display: flex;
+  overflow-x: auto;
+  white-space: nowrap;
+  padding: 12px 16px;
+  gap: 8px;
+  background-color: #ffffff;
+  border-bottom: 0.5px solid rgba(0, 0, 0, 0.08);
+  -webkit-overflow-scrolling: touch;
+}
+
+nav::-webkit-scrollbar, .category-track::-webkit-scrollbar {
+  display: none; /* Hide scrollbar for clean UI */
+}
+
+nav ul, .category-track ul {
+  list-style: none;
+  display: flex;
+  gap: 8px;
+}
+
+nav a, .category-pill {
+  display: inline-block;
+  padding: 6px 14px;
+  background-color: #f2f2f7;
+  color: #007aff;
+  font-size: 0.85rem;
+  font-weight: 600;
+  border-radius: 980px;
+  text-decoration: none;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+nav a.active, .category-pill.active {
+  background-color: #007aff;
+  color: #ffffff;
+}
+
+/* 4. Fix Oversized SVGs & Raw Media Elements */
+svg {
+  max-width: 28px;
+  max-height: 28px;
+  height: auto;
+  width: auto;
+  fill: currentColor;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 22%;
+  object-fit: cover;
+}
+
+/* 5. App Showcase & Card Layout */
+.app-hero-container, .shelf-grid-body {
+  max-width: 600px;
+  margin: 16px auto;
+  padding: 16px;
+  background: #ffffff;
+  border-radius: 18px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.app-icon, picture img {
+  width: 96px;
+  height: 96px;
+  border-radius: 22%;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+  margin-bottom: 12px;
+}
+
+.app-title {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #1d1d1f;
+  margin-bottom: 4px;
+}
+
+.app-subtitle {
+  font-size: 0.9rem;
+  color: #86868b;
+  margin-bottom: 12px;
+}
+
+/* 6. Pure Static "View" Action Button */
+.view-btn, button, .button {
+  display: inline-block;
+  min-width: 76px;
+  padding: 6px 18px;
+  background-color: #f0f0f5;
+  color: #007aff;
+  font-size: 0.88rem;
+  font-weight: 700;
+  text-align: center;
+  border-radius: 980px;
+  border: none;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  cursor: pointer;
+}
+
+.view-btn:active, button:active {
+  background-color: #007aff;
+  color: #ffffff;
+}
+
+/* 7. Ratings & Metadata Display */
+.rating-stars {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  color: #ff9500;
+  font-weight: 600;
+  font-size: 0.85rem;
+  margin-top: 8px;
+}
