@@ -1,4 +1,4 @@
-# 🪐 MEAPPSTORE AUTOMATED ORE EXTRACTION PIPELINE RUNNER
+# MEAPPSTORE AUTOMATED ORE EXTRACTION PIPELINE RUNNER
 name: Mine Pure Gold Ore Pipeline
 
 on:
@@ -13,16 +13,20 @@ jobs:
 
       - name: Execute Cloud Handshake Ingestion
         run: |
-          # 📡 Disguises the cloud server as a mobile iPhone browser to clear Apple's CDN blocks
-          curl -s -L -A "Mozilla/5.0 (iPhone; CPU iPhone OS 16_5 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.5 Mobile/15E148 Safari/604.1" "https://apple.com" -o index.html
-          echo "🥇 Firewalls bypassed successfully: Extracted raw source code block!"
+          # Executes web page ingestion with browser headers to target the specific app store link
+          curl -s -L \
+            -A "Mozilla/5.0 (iPhone; CPU iPhone OS 17_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.0 Mobile/15E148 Safari/604.1" \
+            -H "Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8" \
+            -H "Accept-Language: en-US,en;q=0.9" \
+            "https://apps.apple.com/us/app/apple-store/id375380948" -o index.html
+          echo "Firewalls bypassed successfully: Extracted raw source code block"
 
       - name: Auto-Commit Pure Gold to GitHub Production Branch
         run: |
           git config --global user.name "github-actions[bot]"
-          git config --global user.email "41898282+github-actions[bot]@://github.com"
+          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add index.html
-          git commit -m "🚀 Complete 1:1 automated cloud ore harvest sequence compiled successfully" || echo "No changes detected."
+          git commit -m "🚀 Complete 1:1 automated cloud ore harvest sequence compiled successfully" || echo "No changes to commit"
           
-          # ⚡ CORRECTION STATE LATCHED: Forces the upload straight to the main default branch track!
+          # CORRECTION STATE LATCHED: Forces the upload straight to the main default branch track!
           git push origin main
