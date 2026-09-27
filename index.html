@@ -3,30 +3,20 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>MeAppStore - Custom iOS Style Storefront</title>
+    <title>MeAppStore</title>
     
     <meta name="author" content="Emmanuel Mabheure" />
-    <meta name="description" content="MeAppStore is a custom web storefront for iOS-styled applications, features, and APK releases created by Emmanuel Mabheure." />
-    
-    <!-- CSS Stylesheets -->
-    <link rel="stylesheet" href="src/styles/typography.css" />
-    <link rel="stylesheet" href="src/styles/layout.css" />
-    <link rel="stylesheet" href="src/styles/main.css" />
+    <meta name="description" content="MeAppStore - Custom iOS Style Storefront" />
+    <link rel="manifest" href="./manifest.json" />
+
+    <link rel="stylesheet" href="./src/styles/typography.css" />
+    <link rel="stylesheet" href="./src/styles/layout.css" />
+    <link rel="stylesheet" href="./src/styles/main.css" />
 </head>
 <body>
 
-    <!-- Barebones Mount Node -->
     <div id="app"></div>
 
-    <!-- Scripts (Loaded in sequence) -->
-    <script src="src/components/AppCard.js"></script>
-    <script src="src/components/AppGrid.js"></script>
-    <script src="src/components/Header.js"></script>
-    <script src="src/components/Sidebar.js"></script>
-    <script src="src/components/Footer.js"></script>
-    <script src="src/pages/Home.js"></script>
-    <script src="src/pages/IosClones.js"></script>
-    <script src="src/pages/About.js"></script>
-    <script src="src/main.js"></script>
+    <script type="module" src="./src/main.js"></script>
 </body>
 </html>
